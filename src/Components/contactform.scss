@@ -1,0 +1,140 @@
+// Variables
+$primary-color: #2563eb; // Tailwind's blue-600
+$primary-hover: #1d4ed8; // Tailwind's blue-700
+$error-color: #ef4444;   // Tailwind's red-500
+$success-bg: #d1fae5;    // Tailwind's green-100
+$success-text: #065f46;  // Tailwind's green-700
+$border-color: #d1d5db;  // Tailwind's gray-300
+$bg-color: #f3f4f6;      // Tailwind's gray-100
+$text-color: #1f2937;    // Tailwind's neutral text color
+
+// Container
+.p-6 {
+  padding: 1.5rem;
+  width: 600px;
+  @media (max-width: 500px) {
+    padding: 0px;
+  }
+}
+// .form{
+  
+//   width: 600px;
+//   @media (max-width: 500px) {
+//     width: 400px;
+//   }
+// }
+.max-w-lg {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+// Heading
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+// Form styles
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.block {
+  display: block;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+// Input and textarea
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $border-color;
+  border-radius: 0.375rem;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.3);
+  }
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+// Error styles
+.border-red-500 {
+  border-color: $error-color;
+}
+
+.text-red-500 {
+  color: $error-color;
+}
+
+.text-sm.mt-1 {
+  margin-top: 0.25rem;
+}
+
+// Button styles
+.form_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 100px;
+        background-color: $primary-color;
+        color: #fff;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      
+        &:hover {
+          background-color: $primary-hover;
+        }
+      }
+      
+}
+
+// Success message
+.p-4 {
+  padding: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.text-green-700 {
+  color: $success-text;
+}
+
+.bg-green-100 {
+  background-color: $success-bg;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
