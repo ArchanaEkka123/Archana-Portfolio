@@ -43,13 +43,14 @@ const Services = () => {
             <h2> Projects</h2>
             <div class="">
               <p>
-                Experteeth <a href="https://experteeth.in/">Experteeth</a>
+              Portfolio
+             <a className="project-link" href="https://portfolio-dummy02-n.vercel.app/">https://portfolio-dummy02-n.vercel.app/</a>
               </p>
             </div>
             <div class="">
               <p>
-                Travel-Planners{" "}
-                <a href="https://travel-planners.co.in/">Travel-Planners</a>
+              Travel
+                <a className="project-link" href="https://travel-n4sa.vercel.app/">https://travel-n4sa.vercel.app/</a>
               </p>
             </div>
           </div>

@@ -42,7 +42,12 @@ function GridSlider() {
     );
 
   return (
-    <div className="container">
+    <div className="gallery">
+      <div className="gallery-heading"> 
+        <h1>Gallery</h1>
+      </div>
+
+      <div className="gallery-grid">
       <button onClick={prevSlide} className="slide_button">
         ❮
       </button>
@@ -61,20 +66,11 @@ function GridSlider() {
       <button onClick={nextSlide} className="slide_button">
         ❯
       </button>
+
+      </div>
+      
     </div>
-    // <div style={styles.container}>
-    //   <button onClick={prevSlide} style={styles.button}>
-    //     ❮
-    //   </button>
-    //   <div style={styles.grid}>
-    //     {currentImages.map((img, index) => (
-    //       <img key={index} src={img} alt={`Slide ${index + 1}`} style={styles.image} />
-    //     ))}
-    //   </div>
-    //   <button onClick={nextSlide} style={styles.button}>
-    //     ❯
-    //   </button>
-    // </div>
+    
   );
 }
 

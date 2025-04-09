@@ -1,15 +1,22 @@
 import React from "react";
 import "./home.scss";
-
-
+import About from "./about";
+import Services from "./services";
+ import ImageSlider from "./ImageSlider";
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
     <div className="main_outter">
       <div className="main">
         <div className="sec">
+        <motion.div
+      initial={{ x: '-600px' }}  // Start off-screen to the left
+      animate={{ x: 0 }}         // Animate to its normal position (0, meaning no offset)
+      transition={{ duration: 2 }} // Duration of 2 seconds
+    >
           <div className="left_sec">
-            {/* <img src={MyImage} alt="Description of Image" width={300} height={400} /> */}
+           
 
             <img
               className="myimage"
@@ -18,31 +25,21 @@ const Home = () => {
               alt="Description of the image"
             />
 
-{/* <div style={{ display: "flex", gap: "10px" }}>
-        {images.map((image) => (
-          <div key={image.id}>
-            <img src={image.src} alt={image.alt} style={{ width: "150px", height: "100px" }} />
-            <p>{image.title}</p>
           </div>
-        ))}
-      </div> */}
+          </motion.div>
 
-
-          </div>
+          <motion.div
+      initial={{ x: '+600px' }}  // Start off-screen to the left
+      animate={{ x: 0 }}         // Animate to its normal position (0, meaning no offset)
+      transition={{ duration: 2 }} // Duration of 2 seconds
+    >
           <div className="right_sec">
             <div>
               <p className="line">Hi, I'm Archana Ekka</p>
               <p className="designation">Fontend Developer</p>
             </div>
             <div className="contact">
-              <div className="contact_caintainer">
-                <img
-                  className="icon"
-                  src="/images/call-icon.png"
-                  alt="Description of the image"
-                />
-                <p className="Description">9772144125</p>
-              </div>
+              
               <div className="contact_caintainer">
                 <img
                   className="icon"
@@ -62,34 +59,40 @@ const Home = () => {
                 <p className="Description">Sankar Nagar Raipur</p>
               </div>
             </div>
+            
           </div>
+          </motion.div>
         </div>
+        <div className="sec2">
+        <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+    >
         <h1 className="Keyheading">
           Technical Skills
         </h1>
+        </motion.div>
+
         <div className="cardmain">
+       
           <div className="card">
-            <img
-              className="card_image"
-              src="/images/card_image1.jpg"
-              alt="Description of the image"
-            />
-            {/* <img src={MyImage1} alt="Description of Image" width={300} height={400} /> */}
+           
+            
             <div className="content">
               <p className="content_heading">
                 <b>Languages</b>
               </p>
               <p className="description">HTML5/CSS/JavaScript (ES6+)</p>
             </div>
-          </div>
-          <div className="card">
             <img
               className="card_image"
-              src="/images/card_image8.jpg"
-              alt="Norway"
+              src="/images/card_image1.jpg"
+              alt="Description of the image"
             />
- {/* <img src={MyImage2} alt="Description of Image" width={300} height={400} /> */}
-            <div className="content">
+          </div>
+          <div className="card">
+          <div className="content">
               <p className="content_heading">
                 <b>Frameworks & Libraries</b>
               </p>
@@ -98,15 +101,16 @@ const Home = () => {
                 components.
               </p>
             </div>
-          </div>
-          <div className="card">
             <img
               className="card_image"
-              src="/images/card_image5.jpg"
+              src="/images/card_image8.jpg"
               alt="Norway"
             />
-{/* <img src={MyImage3} alt="Description of Image" width={300} height={400} /> */}
-            <div className="content">
+ 
+           
+          </div>
+          <div className="card">
+          <div className="content">
               <p className="content_heading">
                 <b>Responsive Design</b>
               </p>
@@ -115,11 +119,23 @@ const Home = () => {
                 ensure compatibility across devices.
               </p>
             </div>
+            <img
+              className="card_image"
+              src="/images/card_image5.jpg"
+              alt="Norway"
+            />
+
+            
           </div>
         </div>
+
+        </div>
        
+        <About/>
+       <Services/>
+       <ImageSlider/>
       </div>
-     
+      
     </div>
   );
 };
